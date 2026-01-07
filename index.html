@@ -11,7 +11,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
       body {
         font-family: 'Noto Sans TC', sans-serif;
-        background-color: #1a162e; /* Dark background matching the header */
+        background-color: #1a162e; /* 與標題相符的深色背景 */
         margin: 0;
         padding: 0;
       }
@@ -21,7 +21,6 @@
         padding: 2rem;
         box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
       }
-      /* Ensure the input line looks clean */
       .day-row {
         border-bottom: 1px solid #f3f4f6;
       }
@@ -35,20 +34,25 @@
         body { background: white; }
         .no-print { display: none; }
         .calendar-card { box-shadow: none; border-radius: 0; padding: 0; }
-        .page-break { page-break-before: always; }
       }
     </style>
   <script type="importmap">
 {
   "imports": {
-    "react": "https://esm.sh/react@^19.2.3",
+    "react": "https://esm.sh/react@19.0.0",
+    "react-dom": "https://esm.sh/react-dom@19.0.0",
+    "react-dom/client": "https://esm.sh/react-dom@19.0.0/client",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "react/": "https://esm.sh/react@^19.2.3/"
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <!-- 這裡必須手動加上腳本標記，瀏覽器才會開始執行 React -->
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
